@@ -6,6 +6,7 @@
   --dark: #000000;
   --border-radius: 4px;
   --heading-font: "Josefin Sans", Arial, sans-serif;
+  --heading-font-bold: "Josefin Sans semi-bold";
   --paragraph-font: Roboto, Arial, serif;
 }
 
@@ -111,10 +112,11 @@ p {
   font-size: 3rem;
   background-color: var(--light);
   color: var(--primary);
-  padding: 0 10px;
+  padding: 10px 10px 0 10px;
   display: inline-block;
   border-radius: var(--border-radius);
   box-shadow: 6px 5px var(--tertiary);
+  font-weight: bold;
 }
 
 .list-group {

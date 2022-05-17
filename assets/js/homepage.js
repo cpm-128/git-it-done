@@ -22,10 +22,15 @@ var getUserRepos = function(user) {
 
     //make a request to the url
     fetch(apiURL).then(function(response) {
-        response.json().then(function(data) {
-            // the arguments below is the key from the response object. we are sending to displayRepos. when in displayRepos, we are renaming
-            displayRepos(data, user);
-        });
+        if(response.ok) {
+            response.json().then(function(data) {
+                // the arguments below is the key from the response object. we are sending to displayRepos. when in displayRepos, we are renaming
+                displayRepos(data, user);
+            });
+        } else {
+            // handle 404 errors, such as if a user does not exist
+            window.alert("Error: GitHub User Not Found.");
+        }
     });
     console.log(">>> github url >>>" , apiURL);
 };

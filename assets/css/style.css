@@ -57,7 +57,7 @@ p {
   color: var(--primary);
   border: none;
   outline: none;
-  background-color: var(--light);
+  background-color: var(--secondary);
   box-shadow: 3px 3px var(--dark);
   transform: translate(-1px, -1px);
 }
@@ -158,8 +158,8 @@ p {
 }
 
 .card-header {
-  color: var(--primary);
-  background-color: var(--dark);
+  color: var(--light);
+  background-color: var(--primary);
   padding: 2.5%;
   border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
 }
@@ -185,7 +185,7 @@ p {
   padding: 3%;
   margin: 5px 0;
   font-size: 1.2rem;
-  border: 2px solid var(--light);
+  border: 2px solid var(--dark);
   border-radius: var(--border-radius);
 }
 

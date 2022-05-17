@@ -2,6 +2,7 @@
   --primary: rgb(32,85,107);
   --secondary: rgb(195,193,186);
   --tertiary: rgb(178,199,198);
+  --tertiary-opaque: rgba(178,199,198,0.3);
   --light: #FFFFFF;
   --dark: #000000;
   --border-radius: 4px;
@@ -128,7 +129,7 @@ p {
   margin-bottom: 10px;
   padding: 1.5%;
   border-radius: var(--border-radius);
-  background-color: var(--tertiary);
+  background-color: var(--tertiary-opaque);
   color: var(--dark);
   text-decoration: none;
 }
@@ -193,6 +194,7 @@ p {
   font-size: 1.2rem;
   border: 2px solid var(--dark);
   border-radius: var(--border-radius);
+  /* background-color: var(--tertiary-opaque); */
 }
 
 /* HEIGHT / WIDTH UTILS */

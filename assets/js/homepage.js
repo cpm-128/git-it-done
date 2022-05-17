@@ -22,6 +22,7 @@ var getUserRepos = function(user) {
 
     //make a request to the url
     fetch(apiURL).then(function(response) {
+        // request was successful, no issues with server
         if(response.ok) {
             response.json().then(function(data) {
                 // the arguments below is the key from the response object. we are sending to displayRepos. when in displayRepos, we are renaming
@@ -31,6 +32,12 @@ var getUserRepos = function(user) {
             // handle 404 errors, such as if a user does not exist
             window.alert("Error: GitHub User Not Found.");
         }
+    })
+    // resonse was unsuccessful, issue with server
+    // this catch must immediately follow the .then() method which does NOT end with a ; aka it get chained on
+    // .then and .catch are kind of like if{} else{} for server requests
+    .catch(function(error) {
+        alert("Unable to connect to GitHub.");
     });
     console.log(">>> github url >>>" , apiURL);
 };

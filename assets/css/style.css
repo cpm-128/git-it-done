@@ -150,6 +150,10 @@ p {
   color: rgb(29, 153, 255);
 }
 
+#repo-search-term {
+  color: var(--primary);
+  font-family: var(--heading-font);
+}
 /* CARDS */
 .card {
   margin: 0 0 20px 0;

@@ -1,5 +1,7 @@
 var userFormEl = document.querySelector("#user-form");
 var nameInputEl = document.querySelector("#username");
+var repoContainerEl = document.querySelector("#repos-container");
+var repoSearchTerm = document.querySelector("#repo-search-term");
 
 var formSubmitHandler = function(event) {
     event.preventDefault();
@@ -31,6 +33,9 @@ var getUserRepos = function(user) {
 var displayRepos = function(repos, searchTerm) {
     console.log(">>> repos >>>" , repos);
     console.log(">>> searchTerm >>>" , searchTerm);
+    // clear old content
+    repoContainerEl.textContent = "";
+    repoSearchTerm.textContent = searchTerm;
 };
 
 userFormEl.addEventListener("submit", formSubmitHandler);

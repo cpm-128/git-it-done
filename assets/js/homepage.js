@@ -21,10 +21,16 @@ var getUserRepos = function(user) {
     //make a request to the url
     fetch(apiURL).then(function(response) {
         response.json().then(function(data) {
-            console.log(">>> DATA >>>" , data);
+            // the arguments below is the key from the response object. we are sending to displayRepos. when in displayRepos, we are renaming
+            displayRepos(data, user);
         });
     });
     console.log(">>> github url >>>" , apiURL);
+};
+
+var displayRepos = function(repos, searchTerm) {
+    console.log(">>> repos >>>" , repos);
+    console.log(">>> searchTerm >>>" , searchTerm);
 };
 
 userFormEl.addEventListener("submit", formSubmitHandler);

@@ -126,8 +126,8 @@ p {
   margin-bottom: 10px;
   padding: 1.5%;
   border-radius: var(--border-radius);
-  background-color: var(--light);
-  color: var(--primary);
+  background-color: var(--tertiary);
+  color: var(--dark);
   text-decoration: none;
 }
 

@@ -1,4 +1,4 @@
-var getUserRepos = function() {
+var getUserRepos = function(user) {
     // format the github url
     var apiURL = "https://api.github.com/users/" + user + "/repos";
 
@@ -9,7 +9,5 @@ var getUserRepos = function() {
         });
     });
 };
-
-console.log("outside");
 
 getUserRepos();

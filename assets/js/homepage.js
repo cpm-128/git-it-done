@@ -36,11 +36,15 @@ var getUserRepos = function(user) {
 };
 
 var displayRepos = function(repos, searchTerm) {
-    console.log(">>> repos >>>" , repos);
-    console.log(">>> searchTerm >>>" , searchTerm);
     // clear old content
     repoContainerEl.textContent = "";
     repoSearchTerm.textContent = searchTerm;
+
+    // check if a valid user has any repos
+    if (repos.length === 0) {
+        repoContainerEl.textContent = "User exists but no repositories found.";
+        return;
+    }
 
     // loop over repos
     for (var i = 0; i < repos.length; i++) {

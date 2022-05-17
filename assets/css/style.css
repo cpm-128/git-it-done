@@ -135,7 +135,7 @@ p {
 }
 
 .list-item:hover {
-  background-color: var(--dark);
+  background-color: var(--secondary);
 }
 
 .status-icon {

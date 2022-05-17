@@ -92,7 +92,7 @@ p {
 }
 
  .btn-back:hover {
-  color: var(--tertiary);
+  color: var(--primary);
   background-color: var(--secondary);
   transform: translate(0, 0);
   box-shadow: 2px 2px var(--dark);

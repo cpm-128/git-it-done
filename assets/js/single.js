@@ -3,10 +3,16 @@ var limitWarningEl = document.querySelector("#limit-warning");
 var repoNameEl = document.querySelector("#repo-name");
 
 var getRepoName = function() {
+    // grab repo name from url query string
     var queryString = document.location.search;
     var repoName = queryString.split("=")[1]; // this will provide an array with 2 elements
-    getRepoIssues(repoName); //send the repoName to the function!
-    repoNameEl.textContent = repoName;
+
+    if(repoName) {
+        repoNameEl.textContent = repoName;
+        getRepoIssues(repoName); //send the repoName to the function!
+    } else {
+        document.location.replace("./index.html");
+    }
 };
 
 var getRepoIssues = function(repo) {

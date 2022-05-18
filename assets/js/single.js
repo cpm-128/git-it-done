@@ -7,6 +7,7 @@ var getRepoName = function() {
     var queryString = document.location.search;
     var repoName = queryString.split("=")[1]; // this will provide an array with 2 elements
 
+    // immediately redirect to index.html if a repoName is not found
     if(repoName) {
         repoNameEl.textContent = repoName;
         getRepoIssues(repoName); //send the repoName to the function!
@@ -31,7 +32,8 @@ var getRepoIssues = function(repo) {
                     }
                 });
             } else {
-                alert("There was a problem with the request.");
+                // if not successful, redirect to homepage
+                document.location.replace("./index.html");
             }
         });
 };
@@ -87,4 +89,3 @@ var displayWarning = function(repo) {
 };
 
 getRepoName();
-getRepoIssues();

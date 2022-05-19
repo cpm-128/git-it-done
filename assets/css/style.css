@@ -2,9 +2,13 @@
   --primary: rgb(32,85,107);
   --secondary: rgb(195,193,186);
   --tertiary: rgb(178,199,198);
+  --tertiary-opaque: rgba(178,199,198,0.3);
   --light: #FFFFFF;
   --dark: #000000;
   --border-radius: 4px;
+  --heading-font: "Josefin Sans", Arial, sans-serif;
+  --heading-font-bold: "Josefin Sans semi-bold";
+  --paragraph-font: Roboto, Arial, serif;
 }
 
 * {
@@ -19,6 +23,7 @@ body {
   color: var(--dark);
   line-height: 1.5;
   font-size: 16px;
+  font-family: var(--paragraph-font);
 }
 
 h1,
@@ -31,6 +36,7 @@ h6 {
   margin: 0;
   color: var(--dark);
   line-height: 1.25;
+  font-family: var(--heading-font);
 }
 
 main {
@@ -53,13 +59,13 @@ p {
   color: var(--primary);
   border: none;
   outline: none;
-  background-color: var(--light);
+  background-color: var(--secondary);
   box-shadow: 3px 3px var(--dark);
   transform: translate(-1px, -1px);
 }
 
  .btn:hover {
-  color: var(--tertiary);
+  color: var(--light);
   background-color: var(--secondary);
   transform: translate(0, 0);
   box-shadow: 2px 2px var(--dark);
@@ -86,10 +92,14 @@ p {
 }
 
  .btn-back:hover {
-  color: var(--tertiary);
+  color: var(--primary);
   background-color: var(--secondary);
   transform: translate(0, 0);
   box-shadow: 2px 2px var(--dark);
+}
+
+#language-buttons button {
+  margin-bottom: 7px;
 }
 
 .hero {
@@ -107,10 +117,11 @@ p {
   font-size: 3rem;
   background-color: var(--light);
   color: var(--primary);
-  padding: 0 10px;
+  padding: 10px 10px 0 10px;
   display: inline-block;
   border-radius: var(--border-radius);
   box-shadow: 6px 5px var(--tertiary);
+  font-weight: bold;
 }
 
 .list-group {
@@ -122,13 +133,13 @@ p {
   margin-bottom: 10px;
   padding: 1.5%;
   border-radius: var(--border-radius);
-  background-color: var(--light);
-  color: var(--primary);
+  background-color: var(--tertiary-opaque);
+  color: var(--dark);
   text-decoration: none;
 }
 
 .list-item:hover {
-  background-color: var(--dark);
+  background-color: var(--secondary);
 }
 
 .status-icon {
@@ -146,6 +157,10 @@ p {
   color: rgb(29, 153, 255);
 }
 
+#repo-search-term {
+  color: var(--primary);
+  font-family: var(--heading-font);
+}
 /* CARDS */
 .card {
   margin: 0 0 20px 0;
@@ -154,10 +169,10 @@ p {
 }
 
 .card-header {
-  color: var(--primary);
-  background-color: var(--dark);
+  color: var(--light);
+  background-color: var(--primary);
   padding: 2.5%;
-  border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+  /* border-radius: var(--border-radius) var(--border-radius) 0 0; */
 }
 
 .card-body {
@@ -181,8 +196,9 @@ p {
   padding: 3%;
   margin: 5px 0;
   font-size: 1.2rem;
-  border: 2px solid var(--light);
+  border: 2px solid var(--dark);
   border-radius: var(--border-radius);
+  /* background-color: var(--tertiary-opaque); */
 }
 
 /* HEIGHT / WIDTH UTILS */

@@ -2,6 +2,7 @@ var userFormEl = document.querySelector("#user-form");
 var nameInputEl = document.querySelector("#username");
 var repoContainerEl = document.querySelector("#repos-container");
 var repoSearchTerm = document.querySelector("#repo-search-term");
+var languageButtonsEl = document.querySelector("#language-buttons");
 
 var formSubmitHandler = function(event) {
     event.preventDefault();
@@ -107,4 +108,16 @@ var getFeaturedRepos = function(language) {
         });
 };
 
+var buttonClickHandler = function(event) {
+    var language = event.target.getAttribute("data-language");
+    console.log(">>> language >>>" , event.target.getAttribute("data-language"));
+    if(language) {
+        getFeaturedRepos(language);
+
+        //clear old content in repo container
+        repoContainerEl.textContent="";
+    }
+};
+
 userFormEl.addEventListener("submit", formSubmitHandler);
+languageButtonsEl.addEventListener("click" , buttonClickHandler);

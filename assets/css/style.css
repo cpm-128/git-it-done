@@ -65,7 +65,7 @@ p {
 }
 
  .btn:hover {
-  color: var(--tertiary);
+  color: var(--light);
   background-color: var(--secondary);
   transform: translate(0, 0);
   box-shadow: 2px 2px var(--dark);
@@ -96,6 +96,10 @@ p {
   background-color: var(--secondary);
   transform: translate(0, 0);
   box-shadow: 2px 2px var(--dark);
+}
+
+#language-buttons button {
+  margin-bottom: 7px;
 }
 
 .hero {
@@ -168,7 +172,7 @@ p {
   color: var(--light);
   background-color: var(--primary);
   padding: 2.5%;
-  border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+  /* border-radius: var(--border-radius) var(--border-radius) 0 0; */
 }
 
 .card-body {
